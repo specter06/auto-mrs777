@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.R.S 777</title>
+
+    <style>
+        *{box-sizing:border-box}
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:black;
+        }
+
+        nav{
+            background:#111;
+            display:flex;
+            justify-content:center;
+        }
+        nav a{
+            color:white;
+            padding:15px 25px;
+            text-decoration:none;
+        }
+        nav a:hover{background:#444}
+
+        .content-section{
+            display:none;
+            min-height:100vh;
+            padding:40px 20px;
+            color:white;
+            background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover no-repeat fixed;
+            animation:fade 1s ease;
+        }
+        .active{display:block}
+
+        @keyframes fade{
+            from{opacity:0}
+            to{opacity:1}
+        }
+
+        h1,h2,h3{text-align:center}
+        img{max-width:100%;border-radius:10px}
+        ul{max-width:600px;margin:auto;text-align:left}
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:15px 30px;
+            background:#25d366;
+            color:white;
+            text-decoration:none;
+            border-radius:30px;
+            font-weight:bold;
+            transition:.3s;
+        }
+        .btn:hover{transform:scale(1.05);background:#1ebe5d}
+
+        @media(max-width:600px){
+            nav{flex-direction:column}
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a onclick="show('home')">Home</a>
+    <a onclick="show('products')">Products</a>
+    <a onclick="show('about')">About</a>
+    <a onclick="show('contact')">Contact</a>
+</nav>
+
+<section id="home" class="content-section active">
+    <h1>M.R.S 777</h1>
+    <h3>Avto aksessuarlar va Android monitorlar markazi</h3>
+    <p style="max-width:700px;margin:auto;text-align:center">
+        M.R.S 777 — zamonaviy avtomobil texnologiyalari, Android monitorlar,
+        videoregistratorlar va premium avto aksessuarlarni taklif qiluvchi ishonchli brend.
+        O‘zbekiston bo‘ylab yetkazib berish mavjud.
+    </p>
+    <a class="btn" href="https://t.me/MARUFJONcom" target="_blank">📲 Buyurtma berish</a>
+</section>
+
+<section id="products" class="content-section">
+    <h2>Mahsulotlar</h2>
+    <h3>Tesla Android Monitor</h3>
+    <img src="https://frankfurt.apollo.olxcdn.com/v1/files/x9zuy5wac5jm3-UZ/image">
+    <ul>
+        <li>GPS / Navigator</li>
+        <li>Bluetooth / Wi‑Fi</li>
+        <li>CarPlay</li>
+        <li>Youtube, Waze</li>
+        <li>4GB RAM / 64GB ROM</li>
+    </ul>
+    <p><b>Narxi:</b> 1.250.000 so'm</p>
+    <a class="btn" href="https://t.me/MARUFJONcom" target="_blank">📲 Buyurtma berish</a>
+</section>
+
+<section id="about" class="content-section">
+    <h2>Biz haqimizda</h2>
+    <p>🚘 Katta assortiment avto aksessuarlar</p>
+    <p>📝 Rasmiy kafolat</p>
+    <p>📦 O‘zbekiston bo‘ylab yetkazib berish</p>
+    <a class="btn" href="https://t.me/MARUFJONcom" target="_blank">📲 Buyurtma berish</a>
+</section>
+
+<section id="contact" class="content-section">
+    <h2>Aloqa</h2>
+    <p>📞 +998 90 990 22 20</p>
+    <p>Telegram: @MARUFJONcom</p>
+    <a class="btn" href="https://t.me/MARUFJONcom" target="_blank">📲 Buyurtma berish</a>
+</section>
+
+<script>
+    function show(id){
+        document.querySelectorAll('.content-section').forEach(s=>s.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
